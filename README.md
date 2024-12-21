@@ -1,64 +1,68 @@
-# IMDb Sentiment Analysis Classifier
+# IMDB Sentiment Analysis
 
-This project implements a sentiment analysis classifier using the IMDb movie reviews dataset. The classifier can determine whether a movie review expresses positive or negative sentiment.
+A machine learning project that performs sentiment analysis on IMDB movie reviews using both traditional ML and deep learning approaches.
+
+## Live Demo
+Try out the application here: [IMDB Sentiment Analysis App](https://imdb-data-sentiment-analysis.streamlit.app)
 
 ## Features
+- Text preprocessing with lemmatization and POS tagging
+- Multiple model implementations:
+  - Traditional ML: Logistic Regression and SVM with TF-IDF
+  - Deep Learning: Fine-tuned BERT model
+- Interactive web interface using Streamlit
+- Real-time sentiment prediction
 
-- Text preprocessing including:
-  - Tokenization
-  - Lowercasing
-  - Stop words removal
-  - Special characters removal
-  - Stemming
-- TF-IDF vectorization for text representation
-- Logistic Regression classifier
-- Performance evaluation metrics:
-  - Accuracy
-  - Precision, Recall, F1-Score
-  - Confusion Matrix visualization
-
-## Setup
-
-1. Install the required packages:
-```bash
-pip install -r requirements.txt
+## Project Structure
+```
+├── sentiment_analyzer.py   # Main ML implementation
+├── app.py                 # Streamlit web application
+├── imdb_trainer.ipynb     # BERT model implementation
+├── requirements.txt       # Project dependencies
+└── download_nltk_data.py  # NLTK data downloader
 ```
 
-2. Make sure you have the IMDb dataset in the `aclImdb` directory with the following structure:
-```
-aclImdb/
-├── train/
-│   ├── pos/
-│   └── neg/
-├── test/
-│   ├── pos/
-│   └── neg/
-└── README
-```
+## Setup and Installation
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Download required NLTK data:
+   ```bash
+   python download_nltk_data.py
+   ```
 
 ## Usage
+1. Run the Streamlit app locally:
+   ```bash
+   streamlit run app.py
+   ```
+2. Enter a movie review text
+3. Get instant sentiment prediction with confidence score
 
-Run the sentiment analyzer:
-```bash
-python sentiment_analyzer.py
-```
+## Models
+- **Traditional ML Pipeline**:
+  - TF-IDF vectorization
+  - Logistic Regression and SVM classifiers
+  - GridSearchCV for hyperparameter optimization
 
-This will:
-1. Load and preprocess the IMDb dataset
-2. Train a sentiment classification model
-3. Evaluate the model's performance
-4. Save a confusion matrix visualization
-5. Run a sample prediction
-
-## Model Details
-
-- **Vectorization**: TF-IDF with 5000 features
-- **Classifier**: Logistic Regression
-- **Train/Validation Split**: 80/20
+- **BERT Implementation**:
+  - Fine-tuned BERT-base-uncased
+  - Handles nuanced sentiment expressions
+  - Better context understanding
 
 ## Performance
+- Fast inference time
+- High accuracy on IMDB dataset
+- Robust handling of various review styles
 
-The model's performance metrics will be displayed after training, including:
-- Accuracy score
-- Detailed classification report
-- Confusion matrix visualization (saved as 'confusion_matrix.png')
+## Online Deployment
+The application is deployed using Streamlit Cloud and is accessible at:
+[https://imdb-data-sentiment-analysis.streamlit.app](https://imdb-data-sentiment-analysis.streamlit.app)
+
+## Contributing
+Feel free to open issues or submit pull requests for improvements.
+
+## License
+This project is open source and available under the MIT License.

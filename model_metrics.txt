@@ -1,0 +1,19 @@
+Best Model: Logistic Regression
+
+Best parameters found:
+classifier__C: 1.0
+classifier__class_weight: balanced
+vectorizer__max_features: 5000
+vectorizer__ngram_range: (1, 2)
+
+Best validation accuracy: 0.8818
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.87      0.88      2485
+           1       0.88      0.89      0.88      2515
+
+    accuracy                           0.88      5000
+   macro avg       0.88      0.88      0.88      5000
+weighted avg       0.88      0.88      0.88      5000

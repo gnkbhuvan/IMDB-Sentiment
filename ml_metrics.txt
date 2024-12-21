@@ -1,0 +1,49 @@
+Best parameters found:
+classifier__C: 1.0
+classifier__class_weight: None
+vectorizer__max_features: 7000
+vectorizer__ngram_range: (1, 2)
+
+Best cross-validation score: 0.8806
+
+Validation Accuracy: 0.8858
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.88      0.88      2485
+           1       0.88      0.89      0.89      2515
+
+    accuracy                           0.89      5000
+   macro avg       0.89      0.89      0.89      5000
+weighted avg       0.89      0.89      0.89      5000
+
+
+Sample Predictions:
+
+Text: This movie was fantastic! I really enjoyed every moment of it.
+Sentiment: Positive
+Confidence: 0.8747
+
+Text: The plot was confusing and the acting was terrible.
+Sentiment: Negative
+Confidence: 0.9632
+
+Text: A masterpiece of modern cinema with brilliant performances.
+Sentiment: Positive
+Confidence: 0.9618
+
+Text: A masterpiece of modern cinema with brilliant performances.
+Sentiment: Positive
+Confidence: 0.9618
+Text: A masterpiece of modern cinema with brilliant performances.
+Sentiment: Positive
+Text: A masterpiece of modern cinema with brilliant performances.
+Text: A masterpiece of modern cinema with brilliant performances.
+Text: A masterpiece of modern cinema with brilliant performances.
+Sentiment: Positive
+Confidence: 0.9618
+
+Text: I fell asleep during the movie, it was so boring.
+Sentiment: Negative
+Confidence: 0.9295
